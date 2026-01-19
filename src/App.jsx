@@ -1,17 +1,34 @@
+import { useState } from "react";
 import Task from "./Task";
 
 function App() {
-  const tasks = ["Pray", "Code", "Rest"];
+const [tasks, setTasks] = useState(["Pray", "Code"]);
+const [input, setInput] = useState("");
+
+function addTask() {
+  if (!input) return;
+  setTasks([...tasks, input]);
+  setInput("");
+}
   
   return (
     <div>
       <h1>React</h1>
-      <h2>{tasks.length} Tasks</h2>
+
+      <input
+        value={input}
+        onChange={(e) => setInput(e.target.value)}
+        placeholder="One thing I'll finish today"
+      />
+
+      <button onClick={addTask}>Add</button>
+
       <ul>
         {tasks.map((task) => (
           <Task key={task} title={task} />
         ))}
       </ul>
+
     </div>
   );
 }
