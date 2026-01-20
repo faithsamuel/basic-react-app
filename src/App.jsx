@@ -21,7 +21,10 @@ function addTask() {
         placeholder="One thing I'll finish today"
       />
 
-      <button onClick={addTask}>Add</button>
+      <button onClick={addTask}>
+        {input ? "Add Task" : "Enter a task"}
+      </button>
+
       {tasks.length === 0 && <p>No tasks yet. Start small.</p>}
       <ul>
         {tasks.map((task) => (
