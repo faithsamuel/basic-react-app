@@ -22,7 +22,7 @@ function addTask() {
       />
 
       <button onClick={addTask}>Add</button>
-
+      {tasks.length === 0 && <p>No tasks yet. Start small.</p>}
       <ul>
         {tasks.map((task) => (
           <Task key={task} title={task} />
