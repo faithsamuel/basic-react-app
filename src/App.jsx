@@ -21,14 +21,19 @@ function addTask() {
         placeholder="One thing I'll finish today"
       />
 
-      <button onClick={addTask}>
+      <button onClick={addTask} disabled={!input}>
         {input ? "Add Task" : "Enter a task"}
       </button>
 
       {tasks.length === 0 && <p>No tasks yet. Start small.</p>}
       <ul>
-        {tasks.map((task) => (
-          <Task key={task} title={task} />
+        {tasks.map((task, index) => (
+          <Task key={task}
+                title={task}
+                onDelete={()=>
+                  setTasks(tasks.filter((_, i) => i !== index))
+                }
+             />
         ))}
       </ul>
 
