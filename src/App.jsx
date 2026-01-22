@@ -1,9 +1,34 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Task from "./Task";
 
 function App() {
 const [tasks, setTasks] = useState(["Pray", "Code"]);
 const [input, setInput] = useState("");
+
+// Posts
+const [posts, setPosts] = useState([]);
+const [loading, setLoading] = useState(true);
+const [error, setError] = useState(null);
+
+// Fetch data
+
+useEffect(()=> {
+  fetch("https://jsonplaceholder.typicode.com/posts?_limit=5")
+  .then((res) => {
+    if (!res.ok) {
+      throw new Error("Something went wrong");
+    }
+    return res.json();
+  })
+  .then((data) => {
+    setPosts(data);
+    setLoading(false);
+  })
+  .catch((err) => {
+    setError(err.message);
+    setLoading(false);
+  })
+}, []);
 
 function addTask() {
   if (!input) return;
@@ -15,7 +40,20 @@ function addTask() {
     <div>
       <h1>React</h1>
 
-      <input
+      {loading && <p>Loading posts...</p>}
+      {error && <p>{error}</p>}
+
+      {!loading && !error && (
+        <ul>
+          {posts.map((post) => (
+            <li key={post.id}>
+              <strong>{post.title}</strong>
+            </li>
+          ))}
+        </ul>
+      )}
+
+      {/* <input
         value={input}
         onChange={(e) => setInput(e.target.value)}
         placeholder="One thing I'll finish today"
@@ -35,7 +73,7 @@ function addTask() {
                 }
              />
         ))}
-      </ul>
+      </ul> */}
 
     </div>
   );
