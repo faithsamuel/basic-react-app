@@ -2,8 +2,8 @@ import { useState, useEffect } from "react";
 import Task from "./Task";
 
 function App() {
-const [tasks, setTasks] = useState(["Pray", "Code"]);
-const [input, setInput] = useState("");
+// const [tasks, setTasks] = useState(["Pray", "Code"]);
+// const [input, setInput] = useState("");
 
 // Posts
 const [posts, setPosts] = useState([]);
