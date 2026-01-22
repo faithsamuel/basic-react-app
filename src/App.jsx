@@ -10,6 +10,13 @@ const [posts, setPosts] = useState([]);
 const [loading, setLoading] = useState(true);
 const [error, setError] = useState(null);
 
+// Add Tasks function
+// function addTask() {
+//   if (!input) return;
+//   setTasks([...tasks, input]);
+//   setInput("");
+// }
+
 // Fetch data
 
 useEffect(()=> {
@@ -30,11 +37,7 @@ useEffect(()=> {
   })
 }, []);
 
-function addTask() {
-  if (!input) return;
-  setTasks([...tasks, input]);
-  setInput("");
-}
+
   
   return (
     <div>
