@@ -17,8 +17,8 @@ const [error, setError] = useState(null);
 //   setInput("");
 // }
 
-// Fetch data
 
+// Fetch data when the page loads
 useEffect(()=> {
   fetch("https://jsonplaceholder.typicode.com/posts?_limit=5")
   .then((res) => {
