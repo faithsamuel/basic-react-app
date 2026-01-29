@@ -1,6 +1,14 @@
 import { useState, useEffect } from "react";
 import Task from "./Task";
 
+
+const products = [
+  {id: 1, name: "Laptop", price: 500},
+  {id: 2, name: "Phone", price: 200},
+  {id: 3, name: "Tablet", price: 500}
+];
+
+
 function App() {
 // const [tasks, setTasks] = useState(["Pray", "Code"]);
 // const [input, setInput] = useState("");
