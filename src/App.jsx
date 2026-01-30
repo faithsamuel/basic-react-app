@@ -18,6 +18,7 @@ const [posts, setPosts] = useState([]);
 const [loading, setLoading] = useState(true);
 const [error, setError] = useState(null);
 
+
 // Add Tasks function
 // function addTask() {
 //   if (!input) return;
@@ -66,6 +67,10 @@ useEffect(()=> {
 
       {/* Map Exercise in React */}
       {products.map(product => <li key={product.id}>{product.name}</li>)}
+
+      {/* Filter through products array */}
+
+      
 
       {/* <input
         value={input}
