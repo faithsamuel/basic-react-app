@@ -64,6 +64,9 @@ useEffect(()=> {
         </ul>
       )}
 
+      {/* Map Exercise in React */}
+      {products.map(product => <li key={product.id}>{product.name}</li>)}
+
       {/* <input
         value={input}
         onChange={(e) => setInput(e.target.value)}
