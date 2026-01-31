@@ -66,10 +66,18 @@ useEffect(()=> {
       )}
 
       {/* Map Exercise in React */}
-      {products.map(product => <li key={product.id}>{product.name}</li>)}
+      {/* {products.map(product => <li key={product.id}>{product.name}</li>)} */}
 
       {/* Filter through products array */}
-
+      <ul>
+       {products.filter(product =>product.price < 400)
+       .map(product => (
+        <li key={product.id}>
+          {product.name} - ${product.price}
+        </li>
+       ))
+       }
+      </ul>
       
 
       {/* <input
