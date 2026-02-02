@@ -8,6 +8,9 @@ const products = [
   {id: 3, name: "Tablet", price: 500}
 ];
 
+const product = products.find(product => product.id === 2);
+
+
 
 function App() {
 // const [tasks, setTasks] = useState(["Pray", "Code"]);
@@ -68,8 +71,10 @@ useEffect(()=> {
       {/* Map Exercise in React */}
       {/* {products.map(product => <li key={product.id}>{product.name}</li>)} */}
 
+
+
       {/* Filter through products array */}
-      <ul>
+      {/* <ul>
        {products.filter(product =>product.price < 400)
        .map(product => (
         <li key={product.id}>
@@ -77,7 +82,25 @@ useEffect(()=> {
         </li>
        ))
        }
-      </ul>
+      </ul> */}
+
+      {/* Find a product in the Products array */}
+      {/* <ul>
+        {products.find(product => product.id === 2)
+        .map(product => (
+          <li key={product.id}>
+            {product.name} - ${product.price}</li>
+        ))}
+      </ul> */}
+
+      <ul>
+  {product && (
+    <li key={product.id}>
+      {product.name} - ${product.price}
+    </li>
+  )}
+</ul> 
+
       
 
       {/* <input
