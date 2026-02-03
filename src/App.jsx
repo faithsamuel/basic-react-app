@@ -10,6 +10,10 @@ const products = [
 
 const product = products.find(product => product.id === 2);
 
+// Add a new product to the array
+
+const addNewProduct = [...products, {id: 4, name: "Smart Watch", price: 700}]
+
 
 
 function App() {
@@ -101,7 +105,8 @@ useEffect(()=> {
   )}
 </ul> 
 
-      
+      {/* New products - Spread Operator */}
+      {addNewProduct.map(product => <li key={product.id}>{product.name}</li>)}
 
       {/* <input
         value={input}
