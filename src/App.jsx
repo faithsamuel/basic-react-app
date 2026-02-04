@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import Task from "./Task";
+import Bio from "./components/Bio";
 
 
 const products = [
@@ -129,6 +130,9 @@ useEffect(()=> {
              />
         ))}
       </ul> */}
+
+      {/* Bio component */}
+      <Bio/>
 
     </div>
   );
