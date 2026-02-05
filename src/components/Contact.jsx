@@ -1,11 +1,11 @@
 import React from 'react'
 
-function Contact() {
+function Contact({phone, email}) {
   return (
     <div>
         <h3>My Contact details 🔎</h3>
-        <p>Phone: +00 000 000</p>
-        <p>Email: info@me.com</p>
+        <p>Phone: {phone}</p>
+        <p>Email: {email}</p>
         <p>X: info@me</p>
 
     </div>

@@ -133,8 +133,8 @@ useEffect(()=> {
       </ul> */}
 
       {/* Bio component */}
-      <Bio/>
-      <Contact/>
+      <Bio level={"5"} name={"Faith Sam"}/>
+      <Contact phone={"+00 000 000"} email={"info@me.com"}/>
 
     </div>
   );
