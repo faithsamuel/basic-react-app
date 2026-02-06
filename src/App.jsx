@@ -136,7 +136,7 @@ useEffect(()=> {
       {/* Bio component */}
       <Bio level={"5"} name={"Faith Sam"}/>
       <Contact phone={"+00 000 000"} email={"info@me.com"}/>
-      <ProfileCard />
+      <ProfileCard name={"Faith Samuel"} role={"Software Engineer"}/>
 
     </div>
   );
