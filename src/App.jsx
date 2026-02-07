@@ -3,6 +3,7 @@ import Task from "./Task";
 import Bio from "./components/Bio";
 import Contact from "./components/Contact";
 import ProfileCard from "./components/ProfileCard";
+import Counter from "./components/Counter";
 
 
 const products = [
@@ -137,6 +138,9 @@ useEffect(()=> {
       <Bio level={"5"} name={"Faith Sam"}/>
       <Contact phone={"+00 000 000"} email={"info@me.com"}/>
       <ProfileCard name={"Faith Samuel"} role={"Software Engineer"}/>
+
+      <h1>Counter</h1>
+      <Counter />
 
     </div>
   );
