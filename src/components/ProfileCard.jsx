@@ -15,7 +15,10 @@ function ProfileCard({name, role}) {
     <div>
         <p>Name: {name}</p>
         <p>Role: {role}</p>
+        {
+          toggleSkill &&
         <ul>Skill list: {skillsList.map(skill => <li key={skill}>{skill}</li>)}</ul>
+        }
 
         <button onClick={addSkill}>Add Skill</button>
         
