@@ -6,6 +6,8 @@ function ProfileCard({name, role}) {
 
  const [skillsList, setSkill] = useState(["Problem solving", "Software development", "Project management"]);
 
+ const toggleSkill = useState(false);
+
  const addSkill = () => {
   setSkill([...skillsList, "Tech Sales"]);
  };
