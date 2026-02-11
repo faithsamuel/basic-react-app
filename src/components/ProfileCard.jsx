@@ -4,13 +4,23 @@ function ProfileCard({name, role}) {
 
   // const skillsList = [ "Problom solving", "software development", "project management"];
 
- const [skillsList, setSkill] = useState(["Problem solving", "Software development", "Project management"]);
+ const [skillsList, setSkillsList] = useState([
+  "Problem solving",
+  "Software development",
+  "Project management"
+]);
 
- const toggleSkill = useState(false);
+ const [toggleSkill, setToggleSkill] = useState(false);
 
- const addSkill = () => {
-  setSkill([...skillsList, "Tech Sales"]);
- };
+ 
+
+//  const addSkill = () => {
+//   setSkill([...skillsList, "Tech Sales"]);
+//  };
+
+
+
+
   return (
     <div>
         <p>Name: {name}</p>
@@ -20,7 +30,7 @@ function ProfileCard({name, role}) {
         <ul>Skill list: {skillsList.map(skill => <li key={skill}>{skill}</li>)}</ul>
         }
 
-        <button onClick={addSkill}>Add Skill</button>
+        <button>Show Skill</button>
         
     </div>
   )
