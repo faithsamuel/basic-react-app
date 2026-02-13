@@ -2,7 +2,9 @@ import React, { useState } from 'react'
 
 function ProfileCard({name, role}) {
 
-  const [skillState,toggleSkill] = useState(false);
+  const skills = [ "Problom solving", "software development", "project management"];
+
+  const [areSkillsVisible, showSkills] = useState(false);
 
 
 
@@ -10,11 +12,14 @@ function ProfileCard({name, role}) {
     <div>
         <p>Name: {name}</p>
         <p>Role: {role}</p>
+
         
-        <ul>Skill list:</ul>
+        <ul>Skill list: {skills.map(skill => {
+          <li key={skill}>{skill}</li>
+        })} </ul>
         
 
-        <button>Show Skill</button>
+        <button onClick={}>Show Skills</button>
         
     </div>
   )
