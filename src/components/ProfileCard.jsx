@@ -6,20 +6,24 @@ function ProfileCard({name, role}) {
 
   const [areSkillsVisible, showSkills] = useState(false);
 
-
+  const toggleBtn = ()=> {
+      showSkills(!areSkillsVisible)
+  }
 
   return (
     <div>
         <p>Name: {name}</p>
         <p>Role: {role}</p>
 
-        
-        <ul>Skill list: {skills.map(skill => {
-          <li key={skill}>{skill}</li>
-        })} </ul>
+        {
+          areSkillsVisible &&
+          <ul>Skill list: {skills.map(skill => {
+            return <li key={skill}>{skill}</li>
+          })} </ul>
+        }
         
 
-        <button onClick={}>Show Skills</button>
+        <button onClick={toggleBtn}>Show Skills</button>
         
     </div>
   )
