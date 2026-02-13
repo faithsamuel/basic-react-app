@@ -16,10 +16,11 @@ function ProfileCard({name, role}) {
         <p>Role: {role}</p>
 
         {
-          areSkillsVisible &&
-          <ul>Skill list: {skills.map(skill => {
-            return <li key={skill}>{skill}</li>
-          })} </ul>
+          areSkillsVisible && (
+            <ul>Skill list: {skills.map(skill => {
+              return <li key={skill}>{skill}</li>
+            })} </ul>
+          )
         }
         
 
