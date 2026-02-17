@@ -4,6 +4,7 @@ import Bio from "./components/Bio";
 import Contact from "./components/Contact";
 import ProfileCard from "./components/ProfileCard";
 import Counter from "./components/Counter";
+import SignUp from "./components/SignUp";
 
 
 const products = [
@@ -141,6 +142,9 @@ useEffect(()=> {
 
       <h1>Counter</h1>
       <Counter />
+
+      <h2>COntrolled Form</h2>
+      <SignUp />
 
     </div>
   );
