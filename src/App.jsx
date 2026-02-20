@@ -5,6 +5,7 @@ import Contact from "./components/Contact";
 import ProfileCard from "./components/ProfileCard";
 import Counter from "./components/Counter";
 import SignUp from "./components/SignUp";
+import TaskManager from "./components/TaskManager";
 
 
 const products = [
@@ -145,6 +146,11 @@ useEffect(()=> {
 
       <h2>COntrolled Form</h2>
       <SignUp />
+
+
+      <h2>✅Task Manager☑️</h2>
+      <TaskManager />
+
 
     </div>
   );

@@ -15,7 +15,7 @@ function TaskManager() {
   };
 
   const deleteTask = (indexToDelete) => {
-    setTask(tasks.filter((_, index) => index !== indexToDelete));
+    setTasks(tasks.filter((_, index) => index !== indexToDelete));
   };
 
   return (
@@ -31,6 +31,8 @@ function TaskManager() {
 
         <button type='submit' disabled={!task.trim()}>Add</button>
      </form>
+
+     {tasks.length === 0 && <p>No Tasks yet 👀🙂‍↔️👎🏾</p>}
 
      <ul>
       {tasks.map((item, index) => (
