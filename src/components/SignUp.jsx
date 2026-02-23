@@ -38,7 +38,7 @@ function SignUp() {
           onChange={handleChange}
         />
 
-        <button type="submit">Submit</button>
+        <button type="submit">Submit your Information</button>
 
         <div>
           <h5>Inputted Details:</h5>

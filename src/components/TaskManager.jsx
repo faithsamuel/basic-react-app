@@ -32,7 +32,7 @@ function TaskManager() {
         <button type='submit' disabled={!task.trim()}>Add</button>
      </form>
 
-     {tasks.length === 0 && <p>No Tasks yet 👀🙂‍↔️👎🏾</p>}
+     {tasks.length === 0 && <p>No Tasks yet 👀</p>}
 
      <ul>
       {tasks.map((item, index) => (
